@@ -1,5 +1,4 @@
 import { React, useState } from 'react'
-import { Form } from '../components'
 import { toast } from 'react-toastify';
 import '../assets/footer.css'; // Import your CSS file
 
@@ -38,17 +37,17 @@ export default function Footer() {
           With our bag subscription, you'll receive carefully curated, high quality bags delivered.
         </p>
 
-<form className="mt-4 form-container">
-  <form className="form-base" onSubmit={handleSubmit} method='POST'>
+<form className="mt-4 container">
+  <form className="base" onSubmit={handleSubmit} method='POST'>
  
     <input
-      className="form-input"
+      className="input"
       type="email"
       placeholder="Email address"
       value={email}
       onChange={({ target }) => setEmail(target.value)}
     />
-    <button className="form-submit" type="submit">Subscribe</button>
+    <button className="submit" type="submit">Subscribe</button>
   </form>
 </form>
 

@@ -40,7 +40,7 @@ const Nav = () => {
                 <a href="/about" className="link">
           <span>About Us</span>
         </a>
-                <a href="/about" className="link">
+                <a href="/delivery" className="link">
           <span>Shipping & Delivery</span>
         </a>
                 <a href="/contact" className="link">
@@ -49,8 +49,9 @@ const Nav = () => {
       </div>
 
       <div type="button" onClick={handleOpen} className="button-container">
+      <a href="/cart" className="link">
       <FaCartShopping className="nav_logo"/>
-      
+      </a>
       </div>
 
 

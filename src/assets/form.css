@@ -1,6 +1,15 @@
+.contact-form {
+  margin-top: 20px;
+}
 
+.title {
+  color: #111;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 28px;
+}
 
-.form-error {
+.error {
   background: #e87c03;
   border-radius: 4px;
   font-size: 14px;
@@ -9,61 +18,67 @@
   padding: 15px 20px;
 }
 
-.base {
-  display: flex;
-  flex-direction: column;
-  max-width: 450px;
-  width: 100%;
-}
-
-.form-title {
-  color: #111;
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 28px;
-}
-
-.form-text {
+.text {
   color: #111;
   font-size: 16px;
   font-weight: 500;
 }
 
-.form-text-small {
+.text-small {
   margin-top: 10px;
   color: #8c8c8c;
   font-size: 13px;
   line-height: normal;
 }
 
-.form-link {
+.link {
   color: black;
   text-decoration: none;
 }
 
-.form-link:hover {
+.link:hover {
   color: rgb(233, 30, 99);
 }
 
-.form-input {
+.input-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-row {
+  margin-bottom: 20px;
+}
+
+.input-row label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input {
   background: #fff;
   border-radius: 4px;
-  border: 0;
+   border: 1px solid #ccc; 
   color: black;
   height: 50px;
   line-height: 50px;
   padding: 5px 20px;
   margin-bottom: 20px;
+  width: calc(50% - 10px);
 }
 
-.form-input:last-of-type {
+.input.description {
+  height: 150px;
+  width: 100%;
+  resize: vertical;
+}
+
+.input:last-child {
   margin-bottom: 30px;
 }
 
-.form-submit {
+.submit {
   background: #ff1749;
   border-radius: 4px;
-  margin: 24px 0 12px;
   border: 0;
   color: white;
   cursor: pointer;
@@ -73,9 +88,4 @@
 
 .submit.disabled {
   opacity: 0.5;
-}
-
-.form-image {
-  max-width: 100%;
-  height: auto;
 }
