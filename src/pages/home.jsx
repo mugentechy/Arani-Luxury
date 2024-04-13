@@ -158,10 +158,10 @@ export default function Home() {
  <div className="banner row">
   <div className="col-md-8">
     <img
-        className="mb-3"
+        className="img-fluid mb-3"
             style={{ marginTop: "-35px" }}
       src='/images/cms.webp'
-      className="img-fluid" // Add Bootstrap class for responsive images
+      
       
     />
   </div>

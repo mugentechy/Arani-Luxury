@@ -1,37 +1,62 @@
-import React, { Component } from 'react'
-import { ProductConsumer } from '../context'
-// import { ButtonContainer } from '../assets/Button'
-import { Link } from 'react-router-dom'
-import { Header } from '../components'
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { storeProducts } from '../utils/data'; // Assuming storeProducts is exported from data.js
 
-export default class Details extends Component {
-  render() {
-    return (
-      <ProductConsumer>
-        {(value) => {
-          const { id, artist, img, info, price, title, inCart } =
-            value.detailProduct
+function ProductDetails() {
+  const { id } = useParams(); // Get the ID from route parameters
+  const [product, setProduct] = useState(null);
+  const [cart, setCart] = useState([]);
 
-          return (
-            <div className='container py-5'>
+  // Function to filter products by ID
+  const getProductById = (productId) => {
+    return storeProducts.find((product) => product.id === parseInt(productId));
+  };
 
-              <div className='row'>
-                <div className='col-10 mx-auto col-md-6 my-3'>
-                  <img src={img} className='img-fluid' alt='' />
-                </div>
+  // Set the product state when the component mounts
+  useEffect(() => {
+    const selectedProduct = getProductById(id);
+    setProduct(selectedProduct);
+  }, [id]);
 
+  // Load cart from localStorage on component mount
+  useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem('cart'));
+    if (storedCart) {
+      setCart(storedCart);
+    }
+  }, []);
 
-                {/* prdoduct info */}
-                <div className='col-10 mx-auto col-md-6 my-3 text-capitalize'>
-    
-  
-          
-                </div>
-              </div>
-            </div>
-          )
-        }}
-      </ProductConsumer>
-    )
+  // Save cart to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
+
+  const addToCart = () => {
+    setCart([...cart, product]); // Add the selected product to the cart
+  };
+
+  if (!product) {
+    return <div>Loading...</div>; // Or handle loading state accordingly
   }
+
+  return (
+    <div className='container py-5'>
+      <div className='row'>
+        <div className='col-10 col-md-6'>
+          <img src={product.img} className='img-fluid' alt='' />
+        </div>
+        <div className='col-10 col-md-6 mt-5'>
+          <h5 className="card-title">{product.title}</h5>
+          <p className="card-text">{product.info?.substring(0, 200)}</p>
+          <h5 className="card-price">{product.price}</h5>
+          <div type="button" className="button-container">
+            <button className="nav_btn m-2" onClick={addToCart}>Add To Cart</button>
+            <button className="nav_btn">Buy it now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
+
+export default ProductDetails;

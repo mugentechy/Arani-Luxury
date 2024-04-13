@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { IoArrowBack } from "react-icons/io5";
 import { Card } from 'react-bootstrap';
 import { CiDeliveryTruck } from "react-icons/ci";
@@ -5,24 +6,33 @@ import { MdOutlineVerified } from "react-icons/md";
 import { CiPhone } from "react-icons/ci";
 
 export default function Cart() {
+  const [cartItems, setCartItems] = useState([]);
+
+  // Load cart items from local storage when component mounts
+  useEffect(() => {
+    const storedCartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    setCartItems(storedCartItems);
+  }, []);
+
   return (
     <div className="container">
       <div className="row">
         <div className="col">
           <h2>Your Cart</h2>
-          {/* Cart items will be listed here */}
+          {/* Cart items */}
+          {cartItems.map((item, index) => (
+            <div key={index} className="card mb-3">
+              <div className="card-body">
+                <h5 className="card-title">{item.title}</h5>
+                <p className="card-text">Quantity: 1</p>
+                <p className="card-text">Price: ${item.price}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       <div className="row">
         <div className="col-md-8">
-          {/* Cart items list */}
-          <div className="card mb-3">
-            <div className="card-body">
-              <h5 className="card-title">Product Title</h5>
-              <p className="card-text">Quantity: 1</p>
-              <p className="card-text">Price: $10.00</p>
-            </div>
-          </div>
           {/* More cart items can be added here */}
         </div>
         <div className="col-md-4">
@@ -30,8 +40,8 @@ export default function Cart() {
           <div className="card mb-3">
             <div className="card-body">
               <h5 className="card-title">Cart Summary</h5>
-              <p className="card-text">Total items: 3</p>
-              <p className="card-text">Total price: $30.00</p>
+              <p className="card-text">Total items: {cartItems.length}</p>
+              <p className="card-text">Total price: ${cartItems.reduce((total, item) => total + item.price, 0).toFixed(2)}</p>
             </div>
           </div>
           {/* Checkout options */}

@@ -3,7 +3,6 @@ import Product from './Product';
 import Title from './Title';
 import { ProductConsumer } from '../context';
 import { storeProducts,bagtypes } from '../utils/data';
-import '../assets/shop.css';
 
 export default function Shop() {
   const [filter, setFilter] = useState('');
