@@ -47,7 +47,7 @@ const Navigation = () => {
           <Nav.Link href="/contact">Contact</Nav.Link>
         </Nav>
         <Nav className="button-container">
-          <Nav.Link onClick={handleOpen} className="cart-icon">
+          <Nav.Link href="/cart" onClick={handleOpen} className="cart-icon">
             <FaCartShopping className="cart_logo" />
             {cartItemCount > 0 && <span className="cart-item-count">{cartItemCount}</span>}
           </Nav.Link>

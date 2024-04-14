@@ -26,7 +26,7 @@ export default function App() {
           <Route path="/details/:id" element={<Details />} />
           <Route path="/delivery" element={<Delivery />} />
               <Route path="/about" element={<About />} />
-              <Route path="/Contact" element={<Contact />} />
+              <Route path="/contact" element={<Contact />} />
                <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>

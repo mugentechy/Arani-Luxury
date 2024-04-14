@@ -93,3 +93,56 @@
   .orange{
     color:#f3671f;
   }
+
+
+  .custom-card {
+  display: flex;
+ 
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.custom-img {
+  width: 100px;
+  height: auto;
+}
+
+.custom-card-body {
+  padding: 10px;
+}
+
+.custom-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+}
+
+.custom-quantity {
+
+  background-color: rgba(255, 255, 255, 0.5);
+ 
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  margin-left: auto;
+}
+
+.delete-btn svg {
+  color: red;
+  font-size: 20px;
+}
+
+.custom-card {
+  display: flex;
+
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative; /* Added for positioning the delete button */
+}
