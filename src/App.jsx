@@ -6,12 +6,12 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css";
-import Details from "./components/Details";
-import Shop from "./components/shop";
-import About from "./components/About";
-import Delivery from "./components/delivery";
-import Contact from "./components/Contact";
-import Cart from "./components/cart";
+import Details from "./pages/Details";
+import Shop from "./pages/shop";
+import About from "./pages/About";
+import Delivery from "./pages/delivery";
+import Contact from "./pages/Contact";
+import Cart from "./pages/cart";
 import './app.css'
 
 export default function App() {

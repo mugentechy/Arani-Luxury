@@ -155,7 +155,7 @@ export default function Home() {
   </div>
   
 
- <div className="banner row">
+ <div className="banner-bg row">
   <div className="col-md-8">
     <img
         className="img-fluid mb-3"
@@ -176,7 +176,7 @@ export default function Home() {
 
 
 
-<div className="banner position-relative">
+<div className="banner-bg position-relative">
   <div className="row">
     <div className="col-md-8 m-5">
       <div className='banner-contents'>

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import Product from './Product';
-import Title from './Title';
-import { ProductConsumer } from '../context';
+import Product from '../components/Product';
+import Title from '../components/Title';
 import { storeProducts,bagtypes } from '../utils/data';
 
 export default function Shop() {
