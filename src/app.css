@@ -121,7 +121,7 @@ code {
     bottom: 0;
     right: 0;
     padding: 0.2rem 0.4rem;
-    background: #cd9042;
+    background: #f3671f;
     border: none;
     color: white;
     font-size: 1.4rem;
@@ -136,3 +136,4 @@ code {
     color: white;
     cursor: pointer;
   }
+

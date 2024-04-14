@@ -1,12 +1,13 @@
 .nav-bar {
   border-bottom: 1px solid #ddd;
+  color:white !important;
 
     position: fixed;
   top: 0;
   width: 100%;
   padding: 0px;
   transition: top 0.5s ease 0s;
-  background-color: #f5f4f2;
+  background-color: black;
   border-bottom: 1px solid rgb(229, 232, 235);
   box-shadow: rgb(14 14 14 / 25%) 0px 0px 8px 0px;
 
@@ -16,13 +17,23 @@
   justify-content: space-between;
 }
 
-
+.nav-bar a {
+  color: white;
+}
+.nav-bar a:hover{
+  color:#cd9042;
+}
 .link-container {
   flex-grow: 1;
   display: flex;
   justify-content: center;
 }
 
+.navbar-toggler{
+  background: white !important;
+  color:white !important;
+
+}
 
 .button-container {
   display: flex;
@@ -30,9 +41,21 @@
 }
 
 .nav_logo {
-  font-size: 24px;
-  color: #333;
+  height: 72px;
+  width: auto;
+  object-fit: contain;
+  margin-right: 20px;
 }
+
+.cart_logo {
+  height: 24px;
+  width: 24px;
+  object-fit: contain;
+
+}
+
+
+
 
 .cart-icon {
   position: relative;

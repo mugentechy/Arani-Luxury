@@ -33,10 +33,10 @@ const Navigation = () => {
   }, []);
 
   return (
-    <Navbar bg="light" expand="lg" className="nav-bar">
+    <Navbar  expand="lg" className="nav-bar">
     <div className="container">
       <Navbar.Brand href="/" className="logo-container">
-        <h3 className="nav_logo">Bags</h3>
+        <img className="nav_logo" src="/images/logo.jpg"/>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
@@ -48,7 +48,7 @@ const Navigation = () => {
         </Nav>
         <Nav className="button-container">
           <Nav.Link onClick={handleOpen} className="cart-icon">
-            <FaCartShopping className="nav_logo" />
+            <FaCartShopping className="cart_logo" />
             {cartItemCount > 0 && <span className="cart-item-count">{cartItemCount}</span>}
           </Nav.Link>
         </Nav>

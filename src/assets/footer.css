@@ -33,12 +33,14 @@
 .footer-title {
   color: #757575;
   font-size: 16px;
+  font-weight: 400;
   margin-bottom: 40px;
 }
 
 .footer-text {
   color: #757575;
-  font-size: 13px;
+  font:normal 700 32px/1;
+
   margin-bottom: 40px;
 }
 
@@ -74,3 +76,5 @@
   height: 108px;
   width: 108px;
 }
+
+
