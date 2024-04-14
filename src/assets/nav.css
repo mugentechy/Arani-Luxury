@@ -4,7 +4,7 @@
     position: fixed;
   top: 0;
   width: 100%;
-  padding: 20px;
+  padding: 0px;
   transition: top 0.5s ease 0s;
   background-color: #f5f4f2;
   border-bottom: 1px solid rgb(229, 232, 235);

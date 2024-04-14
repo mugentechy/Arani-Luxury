@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Product from '../components/Product';
 import Title from '../components/Title';
 import { storeProducts,bagtypes } from '../utils/data';
+import '../assets/shop.css'
 
 export default function Shop() {
   const [filter, setFilter] = useState('');

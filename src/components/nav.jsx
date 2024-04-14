@@ -33,7 +33,8 @@ const Navigation = () => {
   }, []);
 
   return (
-    <Navbar bg="light" expand="lg" className="container nav-bar">
+    <Navbar bg="light" expand="lg" className="nav-bar">
+    <div className="container">
       <Navbar.Brand href="/" className="logo-container">
         <h3 className="nav_logo">Bags</h3>
       </Navbar.Brand>
@@ -52,6 +53,7 @@ const Navigation = () => {
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>
+      </div>
     </Navbar>
   );
 };

@@ -1,35 +1,96 @@
-.banner {
+.banners {
   color: white;
- display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition-property: transform;
   background-color: #07101a;
-    margin: auto;
   width: 100%;
-  height:auto;
-
-
+  height: auto;
+  display: flex;
+  position: relative; /* Necessary for positioning the second image */
 }
 
-.banner-bg {
+
+.banner-bg{
+background-color: #07101a;
+color: white;
+
+}
+.banner-img {
+  width: 100%;
+  height: auto;
+  position: relative; /* Ensure positioning context for radio buttons */
+}
+
+.radio-buttons {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.radio-buttons input[type="radio"] {
+  margin-bottom: 10px;
+}
+
+.radio-buttons label {
+  display: block;
   color: white;
-
-  background-color: #07101a;
-
-
-
 }
 
 
-.banner-image{
- 
-  padding-top: 100px;
-
+.radio-options {
+  display: flex;
+  align-items: center;
 }
 
-.banner_contents {
+.radio-options label {
+  margin-right: 10px;
+}
 
+.radio-options input[type="radio"] {
+  display: none;
+}
+
+.radio-button {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.black {
+  background-color: black;
+}
+
+
+
+.banner-image {
+  max-width: 100% !important;
+  width: auto !important; 
+  height: auto !important; 
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-contents {
+  padding: 20px;
+  flex-grow: 1; /* Allow content to grow to take available space */
+  position: relative; /* Ensure proper stacking */
+   left: calc(50% + (max-width of image) / 2);
+   transform: translateX(20%);
+  z-index: 2; /* Ensure content appears above the second image */
+}
+
+@media (max-width: 768px) {
+  .banner-contents {
+    text-align: center;
+    z-index: initial; /* Resetting the z-index for smaller screens */
+  }
 }
 
 .banner_title {
@@ -37,68 +98,75 @@
   font-weight: 800;
   padding-bottom: 0.3rem;
 }
+
 .banner_description {
-  width: 45rem;
   line-height: 1.3;
-  padding-top: 1rem;
   font-size: 0.8rem;
   max-width: 360px;
-  height: 80px;
 }
-.banner_button {
-  cursor: pointer;
-  color: #fff;
-  outline: none;
+
+@media (max-width: 992px) {
+  .banner-img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .banners {
+    flex-direction: column;
+  }
+
+  .banner-img {
+    width: 100%;
+  }
+
+  .banner-contents {
+    text-align: center;
+  }
+}
+
+
+.counter {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 30px;
+ 
+}
+
+.counter button {
+  width: 30px;
+  height: 30px;
+  background-color:white;
+  color: black;
   border: none;
-  font-weight: 700;
-  border-radius: 0.2vw;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  margin-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  background-color: rgba(51, 51, 51, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.banner_button:hover {
-  color: #000;
-  background-color: #e6e6e6;
-  transition: all 0.2s;
-}
-.banner--fadeBottom {
-  height: 7.4rem;
-  background-image: linear-gradient(180deg, transparent, rgb(8, 8, 3), #111);
+
+.counter span {
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.title {
-  text-align: center;
+
+.nav_btn{
+    font-size: .75rem;
+  padding: .875rem 1.625rem;
+  line-height: 1.3175em;
+  background-color: #ff1749;
+  border-color: #de0030;
   color: white;
-  max-width: 640px;
-  font-size: 2rem;
-  font-weight: 500;
-  margin: auto;
+  text-transform: uppercase;
+  border: 0;
+  cursor: pointer;
+   border-radius: 30px;
+
+
 }
 
-.text {
-  text-align: center;
-  color: white;
-  font-size: 26px;
-  font-weight: normal;
-  margin: 16px auto;
-}
-
-@media (max-width: 600px) {
-  .title {
-    font-size: 35px;
-  }
-}
-
-@media (max-width: 600px) {
-  .text {
-    font-size: 18px;
-  }
-}
-
-.card-body > a{
-  color: white;
+.card a{
+  color: white !important;
 }

@@ -6,10 +6,10 @@ import Product from "../components/Product";
 import Reviews from "../components/Reviews";
 import '../assets/banner.css'
 import { storeProducts } from '../utils/data';
-import { url } from "../utils/url.js"
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 import { ImQuotesLeft } from "react-icons/im";
 import jumboData from '../utils/jumbo.json'
+
 
 export default function Home() {
 
@@ -48,15 +48,17 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchData() {
-      setBanner(
-        jumboData[
-          Math.floor(Math.random() * jumboData.length)
-        ]
-      )
-      return jumboData
+      // Fetch initial banner data
+      setBanner(jumboData[Math.floor(Math.random() * jumboData.length)]);
     }
-    fetchData()
-  }, [])
+    fetchData();
+  }, []);
+
+  const handleCategoryChange = (category) => {
+    // Filter banner data based on category and set the new banner
+    const filteredBanner = jumboData.find((item) => item.category === category);
+    setBanner(filteredBanner);
+  };
 
 
 
@@ -77,17 +79,39 @@ export default function Home() {
 
   return (
     <>
- <header className='banner'>
-    <img className='banner-image' src={banner?.image}/>
-      <div className='banner_contents'>
+<header className='banners row'>
+  <div className="col-lg-6 position-relative">
+    <img src="/images/banner.webp" alt="First Banner Image" className="banner-img" />
+       <div className="radio-buttons container">
 
-        <h1 className='banner_title'>{banner?.title}</h1>
+          <input
+            type="radio"
+            id="bag-radio"
+            name="category"
+            value="bag"
+            onChange={() => handleCategoryChange('bag')}
+          />
+          <label htmlFor="bag-radio">Bag</label>
+          
+          <input
+            type="radio"
+            id="watch-radio"
+            name="category"
+            value="backpack"
+            onChange={() => handleCategoryChange('backpack')}
+          />
+          <label htmlFor="watch-radio">BagPack</label>
+        </div>
+  </div>
+  <img className='banner-image' src={banner?.image} alt="Second Banner Image" />
+  
+  <div className="col-lg-6 banner-contents">
+    <h1 className='banner_title'>{banner?.title}</h1>
+    <h1 className='banner_description'>{banner?.subTitle}</h1>
+  </div>
+</header>
 
 
-        <h1 className='banner_description'>{banner?.subTitle}</h1>
-      </div>
-      <div className='banner--fadeBottom' />
-    </header>
 
 
 
@@ -114,37 +138,39 @@ export default function Home() {
 
 
  <div className="price-options mt-5">
-            <div className="radio-options">
-              <label>
-                <input
-                  type="radio"
-                  name="price"
-       
-                
-                  onChange={() => handleMouseLeave()}
-                />
-                Brown
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="price"
-              
-                
-                  onChange={() => handleMouseEnter()}
-                />
-                Black
-              </label>
-            </div>
+    <div className="radio-options">
+  <label>
+    <input
+      type="radio"
+      name="price"
+      value="brown"
+      onChange={() => handleMouseLeave()}
+    />
+    <span className="radio-button brown"></span>
+  </label>
+  <label>
+    <input
+      type="radio"
+      name="price"
+      value="black"
+      onChange={() => handleMouseEnter()}
+    />
+    <span className="radio-button black"></span>
+  </label>
+</div>
+
             <div className="price">
-              <span>Price: {selectedPrice} Ksh</span>
+              <span> 2,000 Ksh</span>
             </div>
-            <div className="counter">
+            <div className="radio-options" >
+            <div className="counter" style={{marginRight:"10px", padding:"3px"}}>
               <button onClick={handleDecrement}>-</button>
               <span>{counter}</span>
               <button onClick={handleIncrement}>+</button>
             </div>
-            <button onClick={handleAddToCart}>Add to Cart</button>
+
+            <button className="nav_btn" onClick={handleAddToCart}>Add to Cart</button>
+            </div>
           </div>
 
 
@@ -188,7 +214,7 @@ export default function Home() {
       <div className="row" style={{ marginTop: "60px" }}>
         {storeProducts.slice(0, 3).map(product => (
               <div className="product-wrapper mx-auto col-md-4 ">
-      <div className="card">
+      <div className="card" style={{ background: "white" }}>
           <Product
             key={product.id}
             id={product.id}
