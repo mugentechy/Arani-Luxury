@@ -463,7 +463,156 @@ export const storeProducts = [
     inCart: false,
     count: 0,
     total: 0,
+  },
+  
+    {
+    id: 29,
+    title: 'William Backpack',
+    img: '/images/belt/10.webp',
+    price: 4650,
+    artist: 'whisky',
+    category:'belt',
+    subject:'Flowers and plants',
+    info: 'Perfection: A perfect pick for daily use, this Polester Trending Backpack can securely be used to carry mobile phone, cards, cosmetics, iPad, umbrella and other daily essential things in a safe, secure and arranged manner. No matter wherever you are heading to, it can be your companion for every hour of need. Stylish &amp; Fashionable: This bag is designed for modern fashion-conscious individuals who desire style along with functionality. It is a perfect mid-sized bag to carry all the daily essentials while using it as a fashion daypack, mini travel bag, college backpack etc.',
+    inCart: false,
+    count: 0,
+    total: 0,
+  },
+  
+    {
+    id: 30,
+    title: 'William Backpack',
+    img: '/images/belt/11.webp',
+    price: 4650,
+    artist: 'whisky',
+    category:'belt',
+    subject:'Flowers and plants',
+    info: 'Perfection: A perfect pick for daily use, this Polester Trending Backpack can securely be used to carry mobile phone, cards, cosmetics, iPad, umbrella and other daily essential things in a safe, secure and arranged manner. No matter wherever you are heading to, it can be your companion for every hour of need. Stylish &amp; Fashionable: This bag is designed for modern fashion-conscious individuals who desire style along with functionality. It is a perfect mid-sized bag to carry all the daily essentials while using it as a fashion daypack, mini travel bag, college backpack etc.',
+    inCart: false,
+    count: 0,
+    total: 0,
+},
+  
+    {
+    id: 31,
+    title: 'William Backpack',
+    img: '/images/belt/12.webp',
+    price: 4650,
+    artist: 'whisky',
+    category:'belt',
+    subject:'Flowers and plants',
+    info: 'Perfection: A perfect pick for daily use, this Polester Trending Backpack can securely be used to carry mobile phone, cards, cosmetics, iPad, umbrella and other daily essential things in a safe, secure and arranged manner. No matter wherever you are heading to, it can be your companion for every hour of need. Stylish &amp; Fashionable: This bag is designed for modern fashion-conscious individuals who desire style along with functionality. It is a perfect mid-sized bag to carry all the daily essentials while using it as a fashion daypack, mini travel bag, college backpack etc.',
+    inCart: false,
+    count: 0,
+    total: 0,
+  },
+  
+    {
+    id: 32,
+    title: 'William Backpack',
+    img: '/images/belt/13.webp',
+    price: 4650,
+    artist: 'whisky',
+    category:'belt',
+    subject:'Flowers and plants',
+    info: 'Perfection: A perfect pick for daily use, this Polester Trending Backpack can securely be used to carry mobile phone, cards, cosmetics, iPad, umbrella and other daily essential things in a safe, secure and arranged manner. No matter wherever you are heading to, it can be your companion for every hour of need. Stylish &amp; Fashionable: This bag is designed for modern fashion-conscious individuals who desire style along with functionality. It is a perfect mid-sized bag to carry all the daily essentials while using it as a fashion daypack, mini travel bag, college backpack etc.',
+    inCart: false,
+    count: 0,
+    total: 0,
+  },
+  
+    {
+    id: 33,
+    title: 'William Backpack',
+    img: '/images/belt/14.webp',
+    price: 4650,
+    artist: 'whisky',
+    category:'belt',
+    subject:'Flowers and plants',
+    info: 'Perfection: A perfect pick for daily use, this Polester Trending Backpack can securely be used to carry mobile phone, cards, cosmetics, iPad, umbrella and other daily essential things in a safe, secure and arranged manner. No matter wherever you are heading to, it can be your companion for every hour of need. Stylish &amp; Fashionable: This bag is designed for modern fashion-conscious individuals who desire style along with functionality. It is a perfect mid-sized bag to carry all the daily essentials while using it as a fashion daypack, mini travel bag, college backpack etc.',
+    inCart: false,
+    count: 0,
+    total: 0,
+  },
+  
+    {
+    id: 34,
+    title: 'William Backpack',
+    img: '/images/belt/15.webp',
+    price: 4650,
+    artist: 'whisky',
+    category:'belt',
+    subject:'Flowers and plants',
+    info: 'Perfection: A perfect pick for daily use, this Polester Trending Backpack can securely be used to carry mobile phone, cards, cosmetics, iPad, umbrella and other daily essential things in a safe, secure and arranged manner. No matter wherever you are heading to, it can be your companion for every hour of need. Stylish &amp; Fashionable: This bag is designed for modern fashion-conscious individuals who desire style along with functionality. It is a perfect mid-sized bag to carry all the daily essentials while using it as a fashion daypack, mini travel bag, college backpack etc.',
+    inCart: false,
+    count: 0,
+    total: 0,
+  },
+  
+    {
+    id: 35,
+    title: 'William Backpack',
+    img: '/images/belt/16.webp',
+    price: 4650,
+    artist: 'whisky',
+    category:'belt',
+    subject:'Flowers and plants',
+    info: 'Perfection: A perfect pick for daily use, this Polester Trending Backpack can securely be used to carry mobile phone, cards, cosmetics, iPad, umbrella and other daily essential things in a safe, secure and arranged manner. No matter wherever you are heading to, it can be your companion for every hour of need. Stylish &amp; Fashionable: This bag is designed for modern fashion-conscious individuals who desire style along with functionality. It is a perfect mid-sized bag to carry all the daily essentials while using it as a fashion daypack, mini travel bag, college backpack etc.',
+    inCart: false,
+    count: 0,
+    total: 0,
+  },
+  
+    {
+    id: 37,
+    title: 'William Backpack',
+    img: '/images/belt/18.webp',
+    price: 4650,
+    artist: 'whisky',
+    category:'belt',
+    subject:'Flowers and plants',
+    info: 'Perfection: A perfect pick for daily use, this Polester Trending Backpack can securely be used to carry mobile phone, cards, cosmetics, iPad, umbrella and other daily essential things in a safe, secure and arranged manner. No matter wherever you are heading to, it can be your companion for every hour of need. Stylish &amp; Fashionable: This bag is designed for modern fashion-conscious individuals who desire style along with functionality. It is a perfect mid-sized bag to carry all the daily essentials while using it as a fashion daypack, mini travel bag, college backpack etc.',
+    inCart: false,
+    count: 0,
+    total: 0,
   }
+
+
+    {
+    id: 30,
+    title: 'William Backpack',
+    img: '/images/belt/11.webp',
+    price: 4650,
+    artist: 'whisky',
+    category:'belt',
+    subject:'Flowers and plants',
+    info: 'Perfection: A perfect pick for daily use, this Polester Trending Backpack can securely be used to carry mobile phone, cards, cosmetics, iPad, umbrella and other daily essential things in a safe, secure and arranged manner. No matter wherever you are heading to, it can be your companion for every hour of need. Stylish &amp; Fashionable: This bag is designed for modern fashion-conscious individuals who desire style along with functionality. It is a perfect mid-sized bag to carry all the daily essentials while using it as a fashion daypack, mini travel bag, college backpack etc.',
+    inCart: false,
+    count: 0,
+    total: 0,
+  }
+
+,
+  
+    {
+    id: 30,
+    title: 'William Backpack',
+    img: '/images/belt/11.webp',
+    price: 4650,
+    artist: 'whisky',
+    category:'belt',
+    subject:'Flowers and plants',
+    info: 'Perfection: A perfect pick for daily use, this Polester Trending Backpack can securely be used to carry mobile phone, cards, cosmetics, iPad, umbrella and other daily essential things in a safe, secure and arranged manner. No matter wherever you are heading to, it can be your companion for every hour of need. Stylish &amp; Fashionable: This bag is designed for modern fashion-conscious individuals who desire style along with functionality. It is a perfect mid-sized bag to carry all the daily essentials while using it as a fashion daypack, mini travel bag, college backpack etc.',
+    inCart: false,
+    count: 0,
+    total: 0,
+  }
+
+
+
+
+
+
 
 
 
