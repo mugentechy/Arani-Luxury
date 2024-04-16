@@ -27,7 +27,7 @@ export default function Reviews() {
   };
 
   return (
-    <div className="row m-5">
+    <div className="row">
       {Array.from({ length: 3 }).map((_, index) => (
    
           <Card className='col-10 col-md-3 mx-auto m-5' key={index}>

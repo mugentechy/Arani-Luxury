@@ -30,7 +30,7 @@ export default function Footer() {
     <footer className="footer">
     <div className="container">
       <div className="row mt-4">
-        <div className="col-4">
+        <div className="col-md-4">
          <h3 className="footer-title">Subscribe newsletter<br /> <span className="orange">and get 20% off</span></h3>
         <p className="footer-text">
           Subscribe to our exclusive bag subscription service and elevate your accessory game to new heights. 
@@ -55,7 +55,7 @@ export default function Footer() {
                      
         </div>
 
-         <div className="col-4">
+         <div className="col-md-4">
           <h3 className="footer-title" style={{ paddingLeft:"2rem" }}>Page</h3>
           <ul >
           <li className="footer-link">Products</li>
@@ -70,7 +70,7 @@ export default function Footer() {
 
 
          </div>
-        <div className="col-4">
+        <div className="col-md-4">
           <div className="footer-link">
           <h3 className="footer-title" >Link</h3>
             <button className="footer-button"><SlSocialYoutube /></button>

@@ -22,7 +22,7 @@ a{
 .banner-container {
   background-image: url('/images/cat-bnr.webp');
   width: 100%;
-  padding: 50px;
+
   text-align: center;
   color: #ffffff;
 }
@@ -174,3 +174,49 @@ code {
 }
 
 
+
+
+@media (max-width: 600px) {
+  .hiddendiv {
+    display: inline-block;
+  }
+
+}
+
+
+
+
+.search-button img {
+  margin-right: 10px;
+  width: 24px;
+}
+.p-header {
+  color:#00acc1;
+}
+
+.p-description{
+  color: #6c8ea0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+.search-input {
+  max-width: 200px;
+  width: 100%;
+  border: 0;
+ 
+  color:black;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #d5c5a9;
+}
+
+.search-button {
+  background: #d5c5a9;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  padding: 0 16px;
+  height: 40px;
+  
+}

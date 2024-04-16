@@ -108,7 +108,7 @@ export default function Shop() {
                 placeholder="Search"
               />
               <button className="search-button" type="submit">
-                <img src='/img/search.png' alt='Search' />
+                <img src='/images/search.png' alt='Search' />
               </button>
             </div>
 
@@ -116,7 +116,7 @@ export default function Shop() {
               <div className="custom-row-input row">
               <div className="col-6">
                 <input
-                  className="custom-input"
+                  className="search-input"
                   id="min-price"
                   type="text"
                   placeholder="Min Price"
@@ -127,7 +127,7 @@ export default function Shop() {
                 </div>
                 <div className="col-6">
                 <input
-                  className="custom-input"
+                  className="search-input"
                   id="max-price"
                   type="text"
                   placeholder="Max Price"
@@ -205,7 +205,7 @@ export default function Shop() {
         placeholder="Find Make"
       />
       <button className="search-button" type="submit">
-        <img src='/img/search.png' alt='Search' />
+        <img src='/images/search.png' alt='Search' />
       </button>
     </div>
     <div className="custom-input-row">
@@ -332,7 +332,7 @@ export default function Shop() {
 
                 <div className="row" >
         {filteredProducts.map(product => (
-                        <div className="product-wrapper mt-2 col-4">
+                        <div className="product-wrapper mt-2 col-md-4">
       <div className="card" style={{ background: "white",color:"black" }}>
           <Product
             key={product.id}

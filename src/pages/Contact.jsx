@@ -19,7 +19,7 @@ export default function Contact() {
   };
 
   return (
-    <div className='mt-4'>
+    <div className=''>
      <header className='banner'>
        <div className="container">
 <IoArrowBack /> Back to Home
@@ -33,7 +33,7 @@ export default function Contact() {
 <div className="container">
   <div className="row">
    <div className='title'>Contact</div>
-    <div className="col-6">
+    <div className="col-md-6">
      
      
         <div className="contact-info">
@@ -46,7 +46,7 @@ export default function Contact() {
         </div>
       </div>
   
-    <div className="col-6">
+    <div className="col-md-6">
       {error && <div className='error'>{error}</div>}
 
       <form  className="card" style={{ background: "white",color:"black", padding:"1rem" }} onSubmit={handleSignIn}>

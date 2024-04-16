@@ -27,10 +27,10 @@ export default function Category() {
   };
 
   return (
-    <div className="row m-5">
+    <div className="row">
      
 
-           <Card className='col-10 col-md-3 mx-auto m-5' style={{backgroundImage:`url('/images/cwallet.webp')`,height:'20em'}}>
+           <Card className='col-md-4 ' style={{backgroundSize:'cover',backgroundImage:`url('/images/cwallet.webp')`,height:'20em'}}>
             <Card.Body>
               <div className="d-flex justify-content-between align-items-center">
                 <div className="star-rating"></div>
@@ -43,7 +43,7 @@ export default function Category() {
           </Card>
 
 
-                <Card className='col-10 col-md-3 mx-auto m-5' style={{backgroundImage:`url('/images/cbags.webp')`,height:'20em'}}>
+                <Card className='col-md-4 ' style={{backgroundSize:'cover',backgroundImage:`url('/images/cbags.webp')`,height:'20em'}}>
             <Card.Body>
               <div className="d-flex justify-content-between align-items-center">
                 <div className="star-rating"></div>
@@ -56,7 +56,7 @@ export default function Category() {
           </Card>
 
 
-      <Card className='col-10 col-md-3 mx-auto m-5' style={{backgroundImage:`url('/images/cpacks.webp')`,height:'20em'}}>
+      <Card className='col-md-4' style={{backgroundSize:'cover',backgroundImage:`url('/images/cpacks.webp')`,height:'20em'}}>
             <Card.Body>
               <div className="d-flex justify-content-between align-items-center">
                 <div className="star-rating"></div>

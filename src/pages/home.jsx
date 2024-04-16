@@ -106,7 +106,7 @@ export default function Home() {
   </div>
   <img className='banner-image' src={banner?.image} alt="Second Banner Image" />
   
-  <div className="col-lg-6 banner-contents">
+  <div className="col-md-6 banner-contents mt-5 container">
     <h1 className='banner_title'>{banner?.title}</h1>
     <h1 className='banner_description'>{banner?.subTitle}</h1>
   </div>
@@ -116,11 +116,12 @@ export default function Home() {
 
 
 
-  <div className="row">
+  <div className="row mb-5 container">
     <div className="col-md-4">
            <img
             src={isHovered ? '/images/black.webp' : '/images/brown.webp'}
             alt="Image"
+            className="img-fluid"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           />
@@ -193,28 +194,29 @@ export default function Home() {
     />
   </div>
   <div className="col-md-6 mt-5">
-    
+    <div className="container">
       <h1 className='banner-title'>Fair prices with<br />valuable designs</h1>
       <p className='banner-description'>Catchy bag company taglines create a difference among
         opponents in the eye of the audience and help to engage customers towards the brand.</p>
-
+ </div>
   </div>
 </div>
 
 
 
 <div className="banner-bg position-relative">
+  <div className="container">
   <div className="row">
-    <div className="col-md-9 m-5">
+    <div className="col-md-9">
   
         <h1 className='banner-title'>Designs that fit everything</h1>
         <p className='banner-description'>It could reflect a business’s goals and personalities through the strong tagline, and customers usually remember the catchy taglines and attract them.</p>
    
 
-      <div className="row" style={{ marginTop: "60px" }}>
+      <div className="row" >
 
      
-             <div className="">
+             <div style={{ margin: "1em" }}>
 
           <input
             type="radio"
@@ -260,7 +262,7 @@ export default function Home() {
           <label htmlFor="watch-radio">BagPack</label>
         </div>
         {storeProducts.slice(0, 3).map(product => (
-              <div className="product-wrapper mx-auto col-md-4 ">
+              <div className="product-wrapper mx-auto col-md-4 mb-3 mt-3 ">
       <div className="card" style={{ background: "white" }}>
           <Product
             key={product.id}
@@ -277,7 +279,7 @@ export default function Home() {
       </div>
     </div>
 
-    <div className="col-md-3 position-absolute bottom-0 p-5  end-0 d-flex justify-content-end ">
+    <div className="col-md-3 position-absolute bottom-0 p-5  end-0 d-flex justify-content-end hiddendiv">
       <img
         src='/images/right.webp'
         className="img-fluid "
@@ -287,7 +289,7 @@ export default function Home() {
   </div>
 </div>
 
-
+</div>
 
 
 
@@ -298,8 +300,8 @@ export default function Home() {
       alt="Image"
     />
   </div>
-  <div className="col-md-4">
-    <div className='banner_contents mt-5'>
+  <div className="col-md-4 ">
+    <div className='banner_contents mt-5 container'>
       <h1 className='banner_title'>A purse which shows gentleman’s gesture</h1>
       <h1 className='banner_description'>Slogans are usually used to emphasize the identity of a brand and make it more reputable in terms of business. Short and eye-catching bag advertisement slogans will be beneficial for advertising the brand.</h1>
       <div type="button" className="button-container">
@@ -336,7 +338,7 @@ export default function Home() {
       </div>
         ))}
 </div>
-  <div className="row mt-5">
+  <div className="row mt-5 container">
      <h1 className='banner-title'>Categories</h1>
         <p className='banner-description'>It could reflect a business’s goals and personalities through the strong tagline, and customers usually remember the catchy taglines and attract them.</p>
    
@@ -349,17 +351,19 @@ export default function Home() {
 
 
 <div className="banner-container">
+<div className="container">
+
   <div className="banner-header">
     <h1 className='banner_title'><ImQuotesLeft/></h1>
     <h6 className='banner_title'>Testimonials</h6>
   </div>
 
 
-  <h3 className='b-title'>I have found the perfect blend of style and functionality in this Brown Leather Backpack. 
+  <h3 className='b-title mb-5'>I have found the perfect blend of style and functionality in this Brown Leather Backpack. 
   As a busy professional, I needed a bag that could hold all my essentials while still looking
    polished and professional.</h3>
 
-  <div className="customer-info">
+  <div className="customer-info mt-5">
     <div className="avatar-container">
       <img src="/images/bruce.jpg" alt="Avatar" className="avatar" />
     </div>
@@ -377,7 +381,7 @@ export default function Home() {
 
   <Reviews />
 </div>
-
+</div>
         
   
     </>
