@@ -10,15 +10,23 @@ import { storeProducts } from '../utils/data';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 import { ImQuotesLeft } from "react-icons/im";
 import jumboData from '../utils/jumbo.json'
+import Pagination from '../components/pagination';
 
 
 export default function Home() {
-
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(5);
    const [email, setEmail] = useState('');
    const [banner, setBanner] = useState([])
      const [isHovered, setIsHovered] = useState(false);
       const [selectedPrice, setSelectedPrice] = useState(null);
   const [counter, setCounter] = useState(1);
+const [items, setItems] = useState(storeProducts);
+
+    const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
 
   const handlePriceChange = (price) => {
     setSelectedPrice(price);
@@ -59,6 +67,14 @@ export default function Home() {
     // Filter banner data based on category and set the new banner
     const filteredBanner = jumboData.find((item) => item.category === category);
     setBanner(filteredBanner);
+  };
+
+
+
+const handleCatChange = (category) => {
+    // Filter banner data based on category and set the new banner
+    const filteredBanner = storeProducts.find((item) => item.category === category);
+    setItems([filteredBanner]);
   };
 
 
@@ -223,7 +239,8 @@ export default function Home() {
             className="m-1"
             id="bag-radio"
             name="pcategory"
-            value="bag"
+            value="wallet"
+            onChange={() => handleCatChange('wallet')}
          
           />
 
@@ -234,7 +251,8 @@ export default function Home() {
             id="watch-radio"
              className="m-1"
             name="pcategory"
-            value="backpack"
+            value="bags"
+            onChange={() => handleCatChange('bags')}
       
           />
 
@@ -245,8 +263,9 @@ export default function Home() {
             id="watch-radio"
              className="m-1"
             name="pcategory"
-            value="backpack"
-      
+            value="belt"
+
+        onChange={() => handleCatChange('belt')}      
           />
           <label htmlFor="watch-radio">Belts</label>
 
@@ -257,11 +276,12 @@ export default function Home() {
              className="m-1"
             name="pcategory"
             value="backpack"
+            onChange={() => handleCatChange('backpack')}
       
           />
           <label htmlFor="watch-radio">BagPack</label>
         </div>
-        {storeProducts.slice(0, 3).map(product => (
+        {items?.slice(0, 3).map(product => (
               <div className="product-wrapper mx-auto col-md-4 mb-3 mt-3 ">
       <div className="card" style={{ background: "white" }}>
           <Product
@@ -321,9 +341,17 @@ export default function Home() {
 
 <div className="banner-bg">
 <div className="container">
+
+  
+
  <div className="row">
-        {storeProducts.slice(0, 3).map(product => (
-              <div className="product-wrapper mx-auto col-md-4 mt-5">
+         <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
+        {storeProducts.slice(0, 4).map(product => (
+              <div className="product-wrapper mx-auto col-md-3 mt-3">
       <div className="card" style={{ background: "white" }}>
           <Product
             key={product.id}
