@@ -47,9 +47,9 @@ export default function Category() {
             <Card.Body>
               <div className="d-flex justify-content-between align-items-center">
                 <div className="star-rating"></div>
-                <small>Bags</small>
+                <small>Categories</small>
               </div>
-              <Card.Title>Wallet</Card.Title>
+              <Card.Title>Bags</Card.Title>
               <Card.Text></Card.Text>
               <Card.Text>6 Items</Card.Text>
             </Card.Body>
