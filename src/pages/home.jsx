@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Product from "../components/Product";
 import Reviews from "../components/Reviews";
+import Category from "../components/category";
 import '../assets/banner.css'
 import { storeProducts } from '../utils/data';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
@@ -182,7 +183,7 @@ export default function Home() {
   
 
  <div className="banner-bg row">
-  <div className="col-md-8">
+  <div className="col-md-6">
     <img
         className="img-fluid mb-3"
             style={{ marginTop: "-35px" }}
@@ -191,12 +192,12 @@ export default function Home() {
       
     />
   </div>
-  <div className="col-md-4">
-    <div className='banner-contents'>
+  <div className="col-md-6 mt-5">
+    
       <h1 className='banner-title'>Fair prices with<br />valuable designs</h1>
       <p className='banner-description'>Catchy bag company taglines create a difference among
         opponents in the eye of the audience and help to engage customers towards the brand.</p>
-    </div>
+
   </div>
 </div>
 
@@ -204,14 +205,60 @@ export default function Home() {
 
 <div className="banner-bg position-relative">
   <div className="row">
-    <div className="col-md-8 m-5">
-      <div className='banner-contents'>
+    <div className="col-md-9 m-5">
+  
         <h1 className='banner-title'>Designs that fit everything</h1>
         <p className='banner-description'>It could reflect a business’s goals and personalities through the strong tagline, and customers usually remember the catchy taglines and attract them.</p>
-      </div>
-
+   
 
       <div className="row" style={{ marginTop: "60px" }}>
+
+     
+             <div className="">
+
+          <input
+            type="radio"
+            className="m-1"
+            id="bag-radio"
+            name="pcategory"
+            value="bag"
+         
+          />
+
+                    <label htmlFor="bag-radio">Wallet</label>
+          
+          <input
+            type="radio"
+            id="watch-radio"
+             className="m-1"
+            name="pcategory"
+            value="backpack"
+      
+          />
+
+          <label htmlFor="bag-radio">Bag</label>
+          
+          <input
+            type="radio"
+            id="watch-radio"
+             className="m-1"
+            name="pcategory"
+            value="backpack"
+      
+          />
+          <label htmlFor="watch-radio">Belts</label>
+
+
+          <input
+            type="radio"
+            id="watch-radio"
+             className="m-1"
+            name="pcategory"
+            value="backpack"
+      
+          />
+          <label htmlFor="watch-radio">BagPack</label>
+        </div>
         {storeProducts.slice(0, 3).map(product => (
               <div className="product-wrapper mx-auto col-md-4 ">
       <div className="card" style={{ background: "white" }}>
@@ -230,10 +277,10 @@ export default function Home() {
       </div>
     </div>
 
-    <div className="col-md-4 position-absolute bottom-0 p-5  end-0">
+    <div className="col-md-3 position-absolute bottom-0 p-5  end-0 d-flex justify-content-end ">
       <img
         src='/images/right.webp'
-        className="img-fluid"
+        className="img-fluid "
         alt="Banner Image"
       />
     </div>
@@ -267,6 +314,40 @@ export default function Home() {
     />
   </div>
 </div>
+
+
+
+<div className="banner-bg">
+<div className="container">
+ <div className="row">
+        {storeProducts.slice(0, 3).map(product => (
+              <div className="product-wrapper mx-auto col-md-4 mt-5">
+      <div className="card" style={{ background: "white" }}>
+          <Product
+            key={product.id}
+            id={product.id}
+            title={product.title}
+            info={product.info}
+            img={product.img}
+            price={product.price}
+            inCart={product.inCart}
+          />
+          </div>
+      </div>
+        ))}
+</div>
+  <div className="row mt-5">
+     <h1 className='banner-title'>Categories</h1>
+        <p className='banner-description'>It could reflect a business’s goals and personalities through the strong tagline, and customers usually remember the catchy taglines and attract them.</p>
+   
+
+<Category />
+</div>
+
+</div>
+</div>
+
+
 <div className="banner-container">
   <div className="banner-header">
     <h1 className='banner_title'><ImQuotesLeft/></h1>

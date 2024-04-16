@@ -34,7 +34,10 @@ color: white;
   display: block;
   color: white;
 }
+.product-wallet{
 
+  z-index: -1;
+}
 
 .radio-options {
   display: flex;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Product from '../components/Product';
 import Title from '../components/Title';
+import Pagination from '../components/pagination';
 import { storeProducts,bagtypes } from '../utils/data';
 import '../assets/shop.css'
 
@@ -15,7 +16,7 @@ export default function Shop() {
   const [filteredCars, setFilteredCars] = useState([]);
   const [selectedLocation, setSelectedLocation] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(30);
+  const [totalPages, setTotalPages] = useState(15);
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
   const [verified, setVerified] = useState('');
@@ -43,6 +44,10 @@ export default function Shop() {
   const [selectedTypes, setSelectedTypes] = useState([]);
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedColors, setSelectedColors] = useState([]);
+
+    const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
 
   const handlePriceChange = (event) => {
     const { name, value } = event.target;
@@ -342,6 +347,12 @@ export default function Shop() {
 
         </div>
         ))}
+
+              <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
       </div>
 
         </div>
