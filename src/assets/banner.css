@@ -82,11 +82,11 @@ color: white;
 
 .banner-contents {
   padding: 20px;
-  flex-grow: 1; /* Allow content to grow to take available space */
-  position: relative; /* Ensure proper stacking */
-   left: calc(50% + (max-width of image) / 2);
+  flex-grow: 1; 
+  position: relative; 
+
    transform: translateX(20%);
-  z-index: 2; /* Ensure content appears above the second image */
+  z-index: 2; 
 }
 
 @media (max-width: 768px) {

@@ -12,7 +12,9 @@ const root = createRoot(container);
 root.render(
       <ProductProvider>
       <ToastContainer />
+      <div className="contain">
        <App /> 
+       </div>
        </ProductProvider>
   
      

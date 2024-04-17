@@ -87,7 +87,7 @@ console.log(cartItems)
         <p className="custom-quantity">Quantity: {item.quantity}</p>
         <p className="custom-card-text">Price: Ksh{item.price}</p>
       </div>
-      <button className="delete-btn"  onClick={() => handleMouseEnter(item.id)}>
+      <button className="delete-btn"  onClick={() => handleDeleteItem(item.id)}>
         <MdDelete />
       </button>
     </div>

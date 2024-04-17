@@ -160,9 +160,9 @@ export const storeProducts = [
   },
   
     {
-    id: 8,
+    id: 7,
     title: 'William Backpack',
-    img: '/images/product/bags/8.webp',
+    img: '/images/product/bags/7.webp',
     price: 4650,
     artist: 'whisky',
     category:'backpack',

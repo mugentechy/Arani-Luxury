@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { storeProducts } from '../utils/data'; // Assuming storeProducts is exported from data.js
-
+import { ToastContainer, toast } from 'react-toastify';
+import {  useNavigate } from 'react-router-dom';
 function ProductDetails() {
   const { id } = useParams(); // Get the ID from route parameters
   const [product, setProduct] = useState(null);
   const [cart, setCart] = useState([]);
-
+ const navigate = useNavigate();
   // Function to filter products by ID
   const getProductById = (productId) => {
     return storeProducts.find((product) => product.id === parseInt(productId));
@@ -33,6 +34,37 @@ function ProductDetails() {
 
   const addToCart = () => {
     setCart([...cart, product]); // Add the selected product to the cart
+         toast.success(
+        <div className="custom-card mb-3">
+      <img src={product.img} className="custom-img" />
+      <div className="custom-card-body">
+        <h5 className="custom-card-title">{product.title}</h5>
+
+        <p className="custom-card-text">Price: Ksh {product.price}</p>
+      </div>
+ 
+    </div>
+    );
+
+  };
+
+
+    const buyNow= () => {
+    setCart([...cart, product]); // Add the selected product to the cart
+         toast.success(
+        <div className="custom-card mb-3">
+      <img src={product.img} className="custom-img" />
+      <div className="custom-card-body">
+        <h5 className="custom-card-title">{product.title}</h5>
+
+        <p className="custom-card-text">Price: Ksh {product.price}</p>
+      </div>
+ 
+    </div>
+    );
+
+         navigate('/cart')
+
   };
 
   if (!product) {
@@ -40,6 +72,8 @@ function ProductDetails() {
   }
 
   return (
+    <>
+      <ToastContainer />
     <div className='container py-5'>
       <div className='row'>
         <div className='col-10 col-md-6'>
@@ -51,11 +85,12 @@ function ProductDetails() {
           <h5 className="card-price">{product.price}</h5>
           <div type="button" className="button-container">
             <button className="nav_btn m-2" onClick={addToCart}>Add To Cart</button>
-            <button className="nav_btn">Buy it now</button>
+            <button className="nav_btn" onClick={buyNow}>Buy it now</button>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 }
 
