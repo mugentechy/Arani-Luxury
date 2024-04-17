@@ -67,9 +67,9 @@ export default function Home() {
 
 
 const handleCatChange = (category) => {
-    const filteredBanner = storeProducts.find((item) => item.category === category);
-    setItems([filteredBanner]);
-  };
+    const filteredItems = storeProducts.filter((item) => item.category === category);
+    setItems(filteredItems);
+};
 
 
 
