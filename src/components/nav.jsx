@@ -35,7 +35,7 @@ const Navigation = () => {
     <Navbar  expand="lg" className="nav-bar">
     <div className="container">
       <Navbar.Brand href="/" className="logo-container">
-        <img className="nav_logo" src="/images/logo.jpg"/>
+        <img className="nav_logo" src="/images/logo.png"/>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
