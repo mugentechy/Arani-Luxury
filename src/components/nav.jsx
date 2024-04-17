@@ -25,7 +25,6 @@ const Navigation = () => {
   };
 
   useEffect(() => {
-    // Fetch cart items count from localStorage or any other source
     const storedCart = JSON.parse(localStorage.getItem('cart'));
     if (storedCart) {
       setCartItemCount(storedCart.length);
@@ -41,7 +40,8 @@ const Navigation = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto align-items-center link-container">
-          <Nav.Link href="/gallery">Products</Nav.Link>
+         <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/product">Products</Nav.Link>
           <Nav.Link href="/about">About Us</Nav.Link>
           <Nav.Link href="/delivery">Shipping & Delivery</Nav.Link>
           <Nav.Link href="/contact">Contact</Nav.Link>

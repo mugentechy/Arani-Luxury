@@ -6,21 +6,15 @@ import { FaCartShopping } from "react-icons/fa6";
 export default function Product({ id, title, img, price, info }) {
 
   const addToCart = () => {
-    // Get the existing cart items from local storage
     const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
-    
-    // Check if the product is already in the cart
     const existingProductIndex = existingCart.findIndex(item => item.id === id);
     
     if (existingProductIndex !== -1) {
-      // If the product is already in the cart, increase its quantity
       existingCart[existingProductIndex].quantity += 1;
     } else {
-      // If the product is not in the cart, add it with quantity 1
       existingCart.push({ id, title, img, price, quantity: 1 });
     }
 
-    // Save the updated cart to local storage
     localStorage.setItem('cart', JSON.stringify(existingCart));
   };
   return (

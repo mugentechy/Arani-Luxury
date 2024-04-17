@@ -9,14 +9,11 @@ export default function Shop() {
   const [filter, setFilter] = useState('');
   const [filterType, setFilterType] = useState('category');
   const [products] = useState(storeProducts);
-
-
-
-  const [searchQuery, setSearchQuery] = useState('');
+   const [searchQuery, setSearchQuery] = useState('');
   const [filteredCars, setFilteredCars] = useState([]);
   const [selectedLocation, setSelectedLocation] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(15);
+  const [totalPages, setTotalPages] = useState(4);
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
   const [verified, setVerified] = useState('');
@@ -83,7 +80,6 @@ export default function Shop() {
 
   const handleSearch = (event) => {
     event.preventDefault();
-    // Trigger useEffect when searchQuery changes
   };
 
   return (
@@ -92,10 +88,7 @@ export default function Shop() {
       <Title name='our' title='products' />
       <div className='row'>
         <div className='col-md-3'>
-          {/* Filter section */}
-        
-
-
+  
 
           <form className="search-form" onSubmit={handleSearch}>
             <div className="input-group p-3 shadow-lg">
@@ -108,7 +101,7 @@ export default function Shop() {
                 placeholder="Search"
               />
               <button className="search-button" type="submit">
-                <img src='/images/search.png' alt='Search' />
+                <img src='/images/icons/search.png' alt='Search' />
               </button>
             </div>
 
@@ -205,7 +198,7 @@ export default function Shop() {
         placeholder="Find Make"
       />
       <button className="search-button" type="submit">
-        <img src='/images/search.png' alt='Search' />
+        <img src='/images/icons/search.png' alt='Search' />
       </button>
     </div>
     <div className="custom-input-row">

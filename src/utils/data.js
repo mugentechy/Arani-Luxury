@@ -79,7 +79,7 @@ export const storeProducts = [
   {
     id: 1,
     title: 'William Backpack',
-    img: '/images/bags/1.webp',
+    img: '/images/product/bags/1.webp',
     price: 4650,
     artist: 'whisky',
     category:'backpack',
@@ -92,7 +92,7 @@ export const storeProducts = [
     {
     id: 2,
     title: 'William Backpack',
-    img: '/images/bags/2.webp',
+    img: '/images/product/bags/2.webp',
     price: 4650,
     artist: 'whisky',
     category:'backpack',
@@ -106,7 +106,7 @@ export const storeProducts = [
     {
     id: 3,
     title: 'William Backpack',
-    img: '/images/bags/3.webp',
+    img: '/images/product/bags/3.webp',
     price: 4650,
     artist: 'whisky',
     category:'backpack',
@@ -120,7 +120,7 @@ export const storeProducts = [
     {
     id: 4,
     title: 'William Backpack',
-    img: '/images/bags/4.webp',
+    img: '/images/product/bags/4.webp',
     price: 4650,
     artist: 'whisky',
     category:'backpack',
@@ -134,7 +134,7 @@ export const storeProducts = [
     {
     id: 5,
     title: 'William Backpack',
-    img: '/images/bags/5.webp',
+    img: '/images/product/bags/5.webp',
     price: 4650,
     artist: 'whisky',
     category:'bags',
@@ -148,7 +148,7 @@ export const storeProducts = [
     {
     id: 6,
     title: 'William Backpack',
-    img: '/images/bags/6.webp',
+    img: '/images/product/bags/6.webp',
     price: 4650,
     artist: 'whisky',
     category:'backpack',
@@ -162,7 +162,7 @@ export const storeProducts = [
     {
     id: 8,
     title: 'William Backpack',
-    img: '/images/bags/8.webp',
+    img: '/images/product/bags/8.webp',
     price: 4650,
     artist: 'whisky',
     category:'backpack',
@@ -176,7 +176,7 @@ export const storeProducts = [
     {
     id: 8,
     title: 'William Backpack',
-    img: '/images/bags/8.webp',
+    img: '/images/product/bags/8.webp',
     price: 4650,
     artist: 'whisky',
     category:'backpack',
@@ -190,7 +190,7 @@ export const storeProducts = [
     {
     id: 9,
     title: 'William Backpack',
-    img: '/images/bags/9.webp',
+    img: '/images/product/bags/9.webp',
     price: 4650,
     artist: 'whisky',
     category:'backpack',
@@ -204,7 +204,7 @@ export const storeProducts = [
     {
     id: 10,
     title: 'William Backpack',
-    img: '/images/bags/10.webp',
+    img: '/images/product/bags/10.webp',
     price: 4650,
     artist: 'whisky',
     category:'backpack',
@@ -218,7 +218,7 @@ export const storeProducts = [
     {
     id: 11,
     title: 'William Backpack',
-    img: '/images/bags/11.webp',
+    img: '/images/product/bags/11.webp',
     price: 4650,
     artist: 'whisky',
     category:'backpack',
@@ -232,7 +232,7 @@ export const storeProducts = [
     {
     id: 12,
     title: 'William Backpack',
-    img: '/images/bags/12.webp',
+    img: '/images/product/bags/12.webp',
     price: 4650,
     artist: 'whisky',
     category:'backpack',
@@ -246,7 +246,7 @@ export const storeProducts = [
     {
     id: 13,
     title: 'William Backpack',
-    img: '/images/bags/13.webp',
+    img: '/images/product/bags/13.webp',
     price: 4650,
     artist: 'whisky',
     category:'bags',
@@ -260,7 +260,7 @@ export const storeProducts = [
     {
     id: 14,
     title: 'William Backpack',
-    img: '/images/bags/14.webp',
+    img: '/images/product/bags/14.webp',
     price: 4650,
     artist: 'whisky',
     category:'bags',
@@ -274,7 +274,7 @@ export const storeProducts = [
     {
     id: 15,
     title: 'William Backpack',
-    img: '/images/bags/15.webp',
+    img: '/images/product/bags/15.webp',
     price: 4650,
     artist: 'whisky',
     category:'bags',
@@ -288,7 +288,7 @@ export const storeProducts = [
     {
     id: 16,
     title: 'William Backpack',
-    img: '/images/bags/16.webp',
+    img: '/images/product/bags/16.webp',
     price: 4650,
     artist: 'whisky',
     category:'backpack',
@@ -302,7 +302,7 @@ export const storeProducts = [
     {
     id: 17,
     title: 'William Backpack',
-    img: '/images/bags/17.webp',
+    img: '/images/product/bags/17.webp',
     price: 4650,
     artist: 'whisky',
     category:'backpack',
@@ -315,7 +315,7 @@ export const storeProducts = [
       {
     id: 18,
     title: 'William Backpack',
-    img: '/images/bags/18.webp',
+    img: '/images/product/bags/18.webp',
     price: 4650,
     artist: 'whisky',
     category:'bags',
@@ -329,7 +329,7 @@ export const storeProducts = [
     {
     id: 19,
     title: 'William Backpack',
-    img: '/images/bags/19.webp',
+    img: '/images/product/bags/19.webp',
     price: 4650,
     artist: 'whisky',
     category:'bags',
@@ -343,7 +343,7 @@ export const storeProducts = [
     {
     id: 20,
     title: 'William Backpack',
-    img: '/images/bags/20.webp',
+    img: '/images/product/bags/20.webp',
     price: 4650,
     artist: 'whisky',
     category:'bags',
@@ -357,7 +357,7 @@ export const storeProducts = [
     {
     id: 21,
     title: 'William Backpack',
-    img: '/images/wallet/1.webp',
+    img: '/images/product/wallet/1.webp',
     price: 4650,
     artist: 'whisky',
     category:'wallet',
@@ -370,7 +370,7 @@ export const storeProducts = [
     {
     id: 22,
     title: 'William Backpack',
-    img: '/images/wallet/2.webp',
+    img: '/images/product/wallet/2.webp',
     price: 4650,
     artist: 'whisky',
     category:'wallet',
@@ -384,7 +384,7 @@ export const storeProducts = [
     {
     id: 23,
     title: 'William Backpack',
-    img: '/images/wallet/3.webp',
+    img: '/images/product/wallet/3.webp',
     price: 4650,
     artist: 'whisky',
     category:'wallet',
@@ -398,7 +398,7 @@ export const storeProducts = [
     {
     id: 24,
     title: 'William Backpack',
-    img: '/images/wallet/4.webp',
+    img: '/images/product/wallet/4.webp',
     price: 4650,
     artist: 'whisky',
     category:'wallet',
@@ -412,7 +412,7 @@ export const storeProducts = [
     {
     id: 25,
     title: 'William Backpack',
-    img: '/images/wallet/5.webp',
+    img: '/images/product/wallet/5.webp',
     price: 4650,
     artist: 'whisky',
     category:'wallet',
@@ -426,7 +426,7 @@ export const storeProducts = [
     {
     id: 26,
     title: 'William Backpack',
-    img: '/images/wallet/6.webp',
+    img: '/images/product/wallet/6.webp',
     price: 4650,
     artist: 'whisky',
     category:'wallet',
@@ -440,7 +440,7 @@ export const storeProducts = [
     {
     id: 27,
     title: 'William Backpack',
-    img: '/images/wallet/7.webp',
+    img: '/images/product/wallet/7.webp',
     price: 4650,
     artist: 'whisky',
     category:'wallet',
@@ -454,7 +454,7 @@ export const storeProducts = [
     {
     id: 28,
     title: 'William Backpack',
-    img: '/images/wallet/8.webp',
+    img: '/images/product/wallet/8.webp',
     price: 4650,
     artist: 'whisky',
     category:'wallet',
@@ -468,7 +468,7 @@ export const storeProducts = [
     {
     id: 29,
     title: 'William Backpack',
-    img: '/images/belt/10.webp',
+    img: '/images/product/belt/10.webp',
     price: 4650,
     artist: 'whisky',
     category:'belt',
@@ -482,7 +482,7 @@ export const storeProducts = [
     {
     id: 30,
     title: 'William Backpack',
-    img: '/images/belt/11.webp',
+    img: '/images/product/belt/11.webp',
     price: 4650,
     artist: 'whisky',
     category:'belt',
@@ -496,7 +496,7 @@ export const storeProducts = [
     {
     id: 31,
     title: 'William Backpack',
-    img: '/images/belt/12.webp',
+    img: '/images/product/belt/12.webp',
     price: 4650,
     artist: 'whisky',
     category:'belt',
@@ -510,7 +510,7 @@ export const storeProducts = [
     {
     id: 32,
     title: 'William Backpack',
-    img: '/images/belt/13.webp',
+    img: '/images/product/belt/13.webp',
     price: 4650,
     artist: 'whisky',
     category:'belt',
@@ -524,7 +524,7 @@ export const storeProducts = [
     {
     id: 33,
     title: 'William Backpack',
-    img: '/images/belt/14.webp',
+    img: '/images/product/belt/14.webp',
     price: 4650,
     artist: 'whisky',
     category:'belt',
@@ -538,7 +538,7 @@ export const storeProducts = [
     {
     id: 34,
     title: 'William Backpack',
-    img: '/images/belt/15.webp',
+    img: '/images/product/belt/15.webp',
     price: 4650,
     artist: 'whisky',
     category:'belt',
@@ -552,7 +552,21 @@ export const storeProducts = [
     {
     id: 35,
     title: 'William Backpack',
-    img: '/images/belt/16.webp',
+    img: '/images/product/belt/16.webp',
+    price: 4650,
+    artist: 'whisky',
+    category:'belt',
+    subject:'Flowers and plants',
+    info: 'Perfection: A perfect pick for daily use, this Polester Trending Backpack can securely be used to carry mobile phone, cards, cosmetics, iPad, umbrella and other daily essential things in a safe, secure and arranged manner. No matter wherever you are heading to, it can be your companion for every hour of need. Stylish &amp; Fashionable: This bag is designed for modern fashion-conscious individuals who desire style along with functionality. It is a perfect mid-sized bag to carry all the daily essentials while using it as a fashion daypack, mini travel bag, college backpack etc.',
+    inCart: false,
+    count: 0,
+    total: 0,
+  },
+  
+    {
+    id: 36,
+    title: 'William Backpack',
+    img: '/images/product/belt/18.webp',
     price: 4650,
     artist: 'whisky',
     category:'belt',
@@ -566,32 +580,60 @@ export const storeProducts = [
     {
     id: 37,
     title: 'William Backpack',
-    img: '/images/belt/18.webp',
+    img: '/images/product/image2.jpeg',
     price: 4650,
     artist: 'whisky',
-    category:'belt',
+    category:'bags',
+    subject:'Flowers and plants',
+    info: 'Perfection: A perfect pick for daily use, this Polester Trending Backpack can securely be used to carry mobile phone, cards, cosmetics, iPad, umbrella and other daily essential things in a safe, secure and arranged manner. No matter wherever you are heading to, it can be your companion for every hour of need. Stylish &amp; Fashionable: This bag is designed for modern fashion-conscious individuals who desire style along with functionality. It is a perfect mid-sized bag to carry all the daily essentials while using it as a fashion daypack, mini travel bag, college backpack etc.',
+    inCart: false,
+    count: 0,
+    total: 0,
+  },
+  
+
+    {
+    id: 38,
+    title: 'William Backpack',
+    img: '/images/product/image3.jpeg',
+    price: 4650,
+    artist: 'whisky',
+    category:'bags',
+    subject:'Flowers and plants',
+    info: 'Perfection: A perfect pick for daily use, this Polester Trending Backpack can securely be used to carry mobile phone, cards, cosmetics, iPad, umbrella and other daily essential things in a safe, secure and arranged manner. No matter wherever you are heading to, it can be your companion for every hour of need. Stylish &amp; Fashionable: This bag is designed for modern fashion-conscious individuals who desire style along with functionality. It is a perfect mid-sized bag to carry all the daily essentials while using it as a fashion daypack, mini travel bag, college backpack etc.',
+    inCart: false,
+    count: 0,
+    total: 0,
+  } ,
+  
+    {
+    id: 39,
+    title: 'William Backpack',
+    img: '/images/product/image4.jpeg',
+    price: 4650,
+    artist: 'whisky',
+    category:'bags',
+    subject:'Flowers and plants',
+    info: 'Perfection: A perfect pick for daily use, this Polester Trending Backpack can securely be used to carry mobile phone, cards, cosmetics, iPad, umbrella and other daily essential things in a safe, secure and arranged manner. No matter wherever you are heading to, it can be your companion for every hour of need. Stylish &amp; Fashionable: This bag is designed for modern fashion-conscious individuals who desire style along with functionality. It is a perfect mid-sized bag to carry all the daily essentials while using it as a fashion daypack, mini travel bag, college backpack etc.',
+    inCart: false,
+    count: 0,
+    total: 0,
+  },
+    
+    {
+    id: 40,
+    title: 'William Backpack',
+    img: '/images/product/image5.jpeg',
+    price: 4650,
+    artist: 'whisky',
+    category:'watch',
     subject:'Flowers and plants',
     info: 'Perfection: A perfect pick for daily use, this Polester Trending Backpack can securely be used to carry mobile phone, cards, cosmetics, iPad, umbrella and other daily essential things in a safe, secure and arranged manner. No matter wherever you are heading to, it can be your companion for every hour of need. Stylish &amp; Fashionable: This bag is designed for modern fashion-conscious individuals who desire style along with functionality. It is a perfect mid-sized bag to carry all the daily essentials while using it as a fashion daypack, mini travel bag, college backpack etc.',
     inCart: false,
     count: 0,
     total: 0,
   }
+  
+
 
 ]
-
-export const detailProduct = {
-
-    id: 1,
-    title: 'Johnnie Walker Double Black',
-    img: '/images/misc/product1.jpg',
-    price: 4650,
-    artist: 'whisky',
-          category:'painting',
-      subject:'Flowers',
-      orientation:'Landscape',
-    info: 'Johnnie walker double black is a Scotch whisky classified as blended scotch whisky. It contains 40% ABV (alcohol by volume). It is offered in 1 litre at Ksh 5150 at Drinks Vine online liquor store. We offer you affordable prices and regular offers coupled with free delivery in Nairobi and environs. Call us, emails or WhatsApp us for reliable online liquor delivery. This smoky whisky which was inspired by the legendary JW Black Label. This family consists of the most sought after blended whiskies.',
-    inCart: false,
-    count: 0,
-    total: 0,
-
-}

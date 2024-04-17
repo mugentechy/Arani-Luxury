@@ -16,14 +16,14 @@ import Pagination from '../components/pagination';
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(5);
-   const [email, setEmail] = useState('');
-   const [banner, setBanner] = useState([])
-     const [isHovered, setIsHovered] = useState(false);
-      const [selectedPrice, setSelectedPrice] = useState(null);
+  const [email, setEmail] = useState('');
+  const [banner, setBanner] = useState([])
+  const [isHovered, setIsHovered] = useState(false);
+  const [selectedPrice, setSelectedPrice] = useState(null);
   const [counter, setCounter] = useState(1);
-const [items, setItems] = useState(storeProducts);
+  const [items, setItems] = useState(storeProducts);
 
-    const handlePageChange = (page) => {
+  const handlePageChange = (page) => {
     setCurrentPage(page);
   };
 
@@ -42,9 +42,6 @@ const [items, setItems] = useState(storeProducts);
     }
   };
 
-  const handleAddToCart = () => {
-    // Implement add to cart functionality
-  };
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -57,14 +54,12 @@ const [items, setItems] = useState(storeProducts);
 
   useEffect(() => {
     async function fetchData() {
-      // Fetch initial banner data
       setBanner(jumboData[Math.floor(Math.random() * jumboData.length)]);
     }
     fetchData();
   }, []);
 
   const handleCategoryChange = (category) => {
-    // Filter banner data based on category and set the new banner
     const filteredBanner = jumboData.find((item) => item.category === category);
     setBanner(filteredBanner);
   };
@@ -72,7 +67,6 @@ const [items, setItems] = useState(storeProducts);
 
 
 const handleCatChange = (category) => {
-    // Filter banner data based on category and set the new banner
     const filteredBanner = storeProducts.find((item) => item.category === category);
     setItems([filteredBanner]);
   };
@@ -83,15 +77,9 @@ const handleCatChange = (category) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    try {
-      // Send the email using an API endpoint on your server
-      const response = await axios.post(`${url}/api/subscribe`, { email });
-      setEmail('');
-      toast(response.data.message);
-    } catch (error) {
 
       toast('An error occurred while sending the email. Please try again.');
-    }
+
   };
 
   return (
@@ -187,7 +175,7 @@ const handleCatChange = (category) => {
               <button onClick={handleIncrement}>+</button>
             </div>
 
-            <button className="nav_btn" onClick={handleAddToCart}>Add to Cart</button>
+            <a href="/product"><button className="nav_btn" >Go To Product</button></a>
             </div>
           </div>
 

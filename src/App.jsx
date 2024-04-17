@@ -22,7 +22,7 @@ export default function App() {
      <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-           <Route path="/gallery" element={<Shop />} />
+           <Route path="/product" element={<Shop />} />
           <Route path="/details/:id" element={<Details />} />
           <Route path="/delivery" element={<Delivery />} />
               <Route path="/about" element={<About />} />

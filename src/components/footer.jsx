@@ -15,15 +15,8 @@ export default function Footer() {
    const handleSubmit = async (event) => {
     event.preventDefault();
 
-    try {
-      // Send the email using an API endpoint on your server
-      const response = await axios.post(`${url}/api/subscribe`, { email });
-      setEmail('');
-      toast(response.data.message);
-    } catch (error) {
-
       toast('An error occurred while sending the email. Please try again.');
-    }
+
   };
 
   return (
@@ -37,8 +30,8 @@ export default function Footer() {
           With our bag subscription, you'll receive carefully curated, high quality bags delivered.
         </p>
 
-<form className="mt-4 container">
-  <form className="base" onSubmit={handleSubmit} method='POST'>
+<form className="base mt-4 container">
+
  
     <input
       className="input"
@@ -47,8 +40,8 @@ export default function Footer() {
       value={email}
       onChange={({ target }) => setEmail(target.value)}
     />
-    <button className="submit" type="submit">Subscribe</button>
-  </form>
+    <button className="submit" >Subscribe</button>
+ 
 </form>
 
 
@@ -58,12 +51,12 @@ export default function Footer() {
          <div className="col-md-4">
           <h3 className="footer-title" style={{ paddingLeft:"2rem" }}>Page</h3>
           <ul >
-          <li className="footer-link">Products</li>
-          <li className="footer-link">About Us</li>
+         <a href="/product"> <li className="footer-link">Products</li></a>
+          <a href="/about"><li className="footer-link">About Us</li></a>
 
-          <li className="footer-link">Shipping & Delivery</li>
+          <a href="/delivery"><li className="footer-link">Shipping & Delivery</li></a>
 
-          <li className="footer-link">Contact</li>
+         <a href="/contact"> <li className="footer-link">Contact</li></a>
 
 
           </ul>
