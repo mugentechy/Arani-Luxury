@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Product from '../components/Product';
 import Title from '../components/Title';
 import Pagination from '../components/pagination';
@@ -14,11 +14,13 @@ export default function Shop() {
   const [selectedLocation, setSelectedLocation] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(4);
+  const [productsPerPage] = useState(10);
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
   const [verified, setVerified] = useState('');
   const [make, setMake] = useState('');
   const [condition, setCondition] = useState('');
+   const [filteredProducts, setFilteredProducts] = useState([]);
 
 
 
@@ -31,9 +33,23 @@ export default function Shop() {
     setFilter('');
   };
 
-  const filteredProducts = products.filter((product) =>
-    product[filterType].toLowerCase().includes(filter.toLowerCase())
-  );
+
+
+    useEffect(() => {
+    // Calculate total pages when filtered products change
+    setTotalPages(Math.ceil(storeProducts.length / productsPerPage));
+  }, [filteredProducts, productsPerPage]);
+
+  useEffect(() => {
+    // Update filtered products based on pagination
+    const startIndex = (currentPage - 1) * productsPerPage;
+    const endIndex = startIndex + productsPerPage;
+    setFilteredProducts(storeProducts.slice(startIndex, endIndex));
+  }, [currentPage, productsPerPage]);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
 
 
 
@@ -42,9 +58,6 @@ export default function Shop() {
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedColors, setSelectedColors] = useState([]);
 
-    const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
 
   const handlePriceChange = (event) => {
     const { name, value } = event.target;
