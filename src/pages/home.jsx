@@ -22,6 +22,22 @@ export default function Home() {
   const [selectedPrice, setSelectedPrice] = useState(null);
   const [counter, setCounter] = useState(1);
   const [items, setItems] = useState(storeProducts);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [productsPerPage] = useState(10);
+
+     useEffect(() => {
+    // Calculate total pages when filtered products change
+    setTotalPages(Math.ceil(storeProducts.length / productsPerPage));
+  }, [filteredProducts, productsPerPage]);
+
+  useEffect(() => {
+    // Update filtered products based on pagination
+    const startIndex = (currentPage - 1) * productsPerPage;
+    const endIndex = startIndex + productsPerPage;
+    setFilteredProducts(storeProducts.slice(startIndex, endIndex));
+  }, [currentPage, productsPerPage]);
+
+
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -338,7 +354,7 @@ const handleCatChange = (category) => {
         totalPages={totalPages}
         onPageChange={handlePageChange}
       />
-        {storeProducts.slice(0, 4).map(product => (
+        {filteredProducts.slice(0, 4).map(product => (
               <div className="product-wrapper mx-auto col-md-3 mt-3">
       <div className="card" style={{ background: "white" }}>
           <Product
