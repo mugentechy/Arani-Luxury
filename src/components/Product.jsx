@@ -45,7 +45,7 @@ export default function Product({ id, title, img, price, info }) {
       <Link to={`/details/${id}`}>
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
-        <p className="card-text">{info?.substring(0, 200)}</p>
+       
         <h5 className="card-price">{price}</h5>
       </div>
     </Link>
