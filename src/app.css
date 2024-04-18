@@ -11,7 +11,7 @@ html, body {
 
 
 .contain{
-  box-sizing: content-box;
+ object-fit: contain;
 }
 
 
@@ -166,8 +166,8 @@ a{
 
 
 @media (max-width: 600px) {
-  .hiddendiv {
-    display: inline-block;
+  .hiddendiv img{
+    display: none;
   }
 
 }

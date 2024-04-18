@@ -101,7 +101,7 @@ const handleCatChange = (category) => {
   return (
     <>
 <header className='banners row'>
-  <div className="col-lg-6 position-relative">
+  <div className="col-lg-6 position-relative banner-bag">
     <img src="/images/banner.webp" alt="First Banner Image" className="banner-img" />
        <div className="radio-buttons container">
 
