@@ -27,6 +27,12 @@ a{
   list-style: none;
 }
 
+
+Modal{
+  background-image: url('/images/cat-bnr.webp');
+}
+
+
 .banner-container {
   background-image: url('/images/cat-bnr.webp');
   width: 100%;
