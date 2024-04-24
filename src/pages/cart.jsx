@@ -7,6 +7,14 @@ import { CiPhone } from "react-icons/ci";
 import '../assets/form.css';
 import { MdDelete } from "react-icons/md";
 
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Avatar from '@mui/material/Avatar';
+
 export default function Cart() {
   const [cartItems, setCartItems] = useState([]);
     const [firstName, setFirstName] = useState('');
@@ -48,7 +56,7 @@ export default function Cart() {
     <div className="container">
       <div className="row mt-5">
        <h2>Contact</h2>
-      <div className="col-6">
+      <div className="col-md-6">
 
             <form  style={{ background: "white",color:"black", padding:"1rem" }} onSubmit={handleSubmit}>
         <div className='input-row'>
@@ -100,7 +108,7 @@ export default function Cart() {
       </form>
 
       </div>
-        <div className="col-6">
+        <div className="col-md-6">
       
           {cartItems.map((item, index) => (
     <div className="custom-card mb-3">
@@ -129,33 +137,70 @@ export default function Cart() {
 
 
           <Modal  show={showModal} onHide={handleCloseModal} size="lg">
-        <Modal.Header style={{ backgroundImage:`url('/images/invalid.jpg')` }} closeButton>
-          <Modal.Title>Arani Luxury</Modal.Title>
-        </Modal.Header>
-        <Modal.Body style={{ backgroundImage:`url('/images/invalid.jpg')` }}>
-      
-  <p>{firstName} {lastName}</p>
-  <p>{email}</p>
-  <p>{phoneNumber}</p>
-  <h5>Items Purchased:</h5>
-  {cartItems.map((item, index) => (
-    <div key={index} className="custom-card mb-3">
-      <img src={item.img} className="custom-img" alt={item.title} />
-      <div className="custom-card-body">
-        <h5 className="custom-quantity">{item.title}</h5>
-        <p className="custom-quantity">Quantity: {item.quantity}</p>
-        <p className="custom-quantity">Price: Ksh{item.price}</p>
-      </div>
+  
+        <Modal.Body style={{height:'100vh'}}>
 
-    </div>
-  ))}
-  <div className="card-body">
+                 <div className="row">
+ <div className="col-md-6">
+        <img className="nav_logo" src="/images/logo.jpg"/>
+ <Modal.Title>Arani Luxury</Modal.Title>
+         </div>
+ <div className="col-md-6">
+
+       
+      
+  <p className="p-right">{firstName} {lastName}</p>
+  <p className="p-right">{email}</p>
+  <p className="p-right">{phoneNumber}</p>
+
+</div>
+</div>
+
+
+        <TableContainer >
+      <Table  aria-label="simple table">
+        <TableHead>
+          <TableRow>
+                <TableCell>Image</TableCell>
+            <TableCell align="right">Item</TableCell>
+
+            <TableCell align="right">Quantity</TableCell>
+
+            <TableCell align="right">Price</TableCell>
+      
+          </TableRow>
+        </TableHead>
+        <TableBody>
+ {cartItems.map((row, index) => (
+            <TableRow
+              key={row.id}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+                <TableCell component="th" scope="row">
+               <Avatar alt={row.title} src={row.img} />
+               
+              </TableCell>
+              <TableCell align="right">{row.title}</TableCell>
+               <TableCell align="right">{row.quantity}</TableCell>
+
+              <TableCell align="right">{row.price}</TableCell>
+             
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+ <div className="row">
+ <div className="col-md-8">
+</div>
+  <div className="col-md-4">
 
     <p className="custom-quantity">Total items: {cartItems.length}</p>
     <p className="custom-quantity">Total price: Ksh{cartItems.reduce((total, item) => total + item.price, 0).toFixed(2)}</p>
   </div>
+   </div>
         </Modal.Body>
-        <Modal.Footer style={{ backgroundImage:`url('/images/invalid.jpg')` }}>
+        <Modal.Footer >
           <Button variant="secondary" onClick={handlePrint}>Print</Button>
           <Button variant="primary" onClick={handleCloseModal}>Close</Button>
         </Modal.Footer>

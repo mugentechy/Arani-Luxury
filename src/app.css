@@ -28,8 +28,8 @@ a{
 }
 
 
-Modal{
-  background-image: url('/images/cat-bnr.webp');
+.p-right{
+  text-align: right;
 }
 
 
